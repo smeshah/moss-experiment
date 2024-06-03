@@ -1,0 +1,44 @@
+# MOSS
+
+## Scripts
+
+1. **moss.pl**: MOSS script to submit requests to the MOSS server.
+2. **run_moss.py**: Runs the MOSS script on a specified directory and saves the results URL.
+3. **parse_moss_results.py**: Parses MOSS results, filters matches based on a threshold, and generates an HTML report.
+
+## Usage
+
+### 1. moss.pl
+
+Download `moss.pl` from the MOSS website.
+
+### 2. run_moss.py
+
+Run this script to process files in a base directory and save the MOSS results URL.
+
+**Example:**
+```sh
+python3 run_moss.py <base_directory> <output_directory>
+# Example:
+python3 run_moss.py Leetcode1-20 moss_results
+```
+
+### 3. parse_moss_results.py
+
+Run this script to parse results from the output directory and generate an HTML file for matches above a specified threshold.
+
+**Example:**
+```sh
+python3 parse_moss_results.py <output_directory> <threshold>
+# Example:
+python3 parse_moss_results.py moss_results 40
+```
+
+**Output:**
+[final_result](./matching_results.html)
+
+#### Other tools to refer:
+
+https://github.com/soachishti/moss.py
+https://github.com/thu-cs-lab/jieplag
+https://github.com/JonathanPierce/Algae/
